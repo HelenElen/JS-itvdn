@@ -1,0 +1,48 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        //[alt+z] создайте функцию конструктор Box для создания объекта со свойствами Height, Width, Depth, Material. Также в объекте должны быть методы Volume - для получения объема и equals - для сравнения объектов, объекты должны считаться равными, если содержат одинаковые значения в свойстве Material.
+
+        function Box(h, w, d, m) {
+            this.Height = h;
+            this.Width = w;
+            this.Depth = d;
+            this.Material = m;
+        }
+
+        Box.prototype.Volume = function () {
+            return this.Height * this.Width * this.Depth;
+        };
+
+        Box.prototype.equals = function (obj) {
+            if (this.Material == obj.Material) {
+                document.write("==", "</br>");
+            } else {
+                document.write("!=", "</br>");
+            }
+        };
+
+        var box1 = new Box(10, 10, 5, 'plastic');
+        var box2 = new Box(2, 2, 2, 'plastic');
+        var box3 = new Box(2, 5, 2, 'metal');
+
+
+        document.write(box1.Width, ',', box1.Height, ',', box1.Depth, "</br>");
+        document.write(box2.Width, ',', box2.Height, ',', box1.Depth, "</br>");
+        document.write(box1.Volume(), "</br>");
+        document.write(box2.Volume(), "</br>");
+
+        box1.equals(box2);
+        box2.equals(box3);
+        box1.equals(box3);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

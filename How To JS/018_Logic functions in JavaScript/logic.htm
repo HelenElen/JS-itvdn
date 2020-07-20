@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script type="text/javascript">
+		////OR
+		
+        document.write((true || true) + "<br />"); // true
+        document.write((false || true) + "<br />"); // true
+        document.write((true || false) + "<br />"); // true
+        document.write((false || false) + "<br />"); // false
+
+        ////AND
+
+        document.write((true && true) + "<br />"); // true
+        document.write((false && true) + "<br />"); // false
+        document.write((true && false) + "<br />"); // false
+        document.write((false && false) + "<br />"); // false
+    	
+        ////NOT
+
+        document.write((!true) + "<br />"); // false
+        document.write((!1) + "<br />"); // false
+
+        //Example
+
+        var a = 32;
+        var b = 56;
+
+        if (a == 32 && b == 56) {
+            document.write("AND operation" + "<br />");
+        }
+
+        if (a == 67 || b == 56) {
+            document.write("OR operation");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

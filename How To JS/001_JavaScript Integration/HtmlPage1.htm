@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JS Integration</title>
+
+    <!--Скрипт подключенный внутрь тэга head-->
+
+    <script type="text/javascript">
+    	alert("Script in head");
+    </script>
+
+    <!--Скрипт подключенный из внешнего файла-->
+    <script type="text/javascript" src="file.js"></script>
+</head>
+<body>
+    <!--Скрипт подключенный в любое место в разметке-->
+    <script>
+    	alert("Script in body!");
+    </script>
+
+    <p>
+		JavaScript - прототипно-ориентированный скриптовый язык программирования.
+	</p>
+
+	<!--Скрипт помещенный перед закрывающимся тэгом body-->
+
+	<script type="text/javascript" src="file.js"></script>
+</body>
+</html>

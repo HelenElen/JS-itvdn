@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Array Methods</title>
+
+    <script type="text/javascript">
+
+        //Join
+        var array = [6, 4, 2, 0, -2, -4, -6];
+        document.write("Join: " + array.join(' | ') + "<br />");
+
+        //Concat
+        array = array.concat(-8, -10, -12);
+        document.write("Concat: " + array.join(' | ') + "<br />");
+
+        //Reverse
+        array.reverse();
+        document.write("Reverse: " + array.join(' | ') + "<br />");
+
+        //Slice
+        var temp = array.slice(3, 6);
+        document.write("Slice: " + temp.join(' | ') + "<br />");
+
+        //Splice
+
+        //deleting
+        temp = array.splice(1, 2);
+        document.write("Splice deleting: " + temp.join(' | ') + "<br />");
+        //insertion
+        array.splice(1, 0, 4, 7, 6, 8, 0, 9);
+        document.write("Splice insertion: " + array.join(' | ') + "<br />");
+
+        //Sort
+        array.sort();
+        document.write("Sort: " + array.join(' | ') + "<br />");
+
+        //Push
+        array.push(25, 56, 78);
+        document.write("Push: " + array.join(' | ') + "<br />");
+
+        //Pop
+        array.pop();
+        array.pop();
+        document.write("Pop: " + array.join(' | ') + "<br />");
+
+        //Shift
+        temp = array.shift();
+        document.write("Shift: " + temp + "<br />");
+
+        //Unshift
+        array.unshift("Hello", "World");
+        document.write("Unshift: " + array.join(' | ') + "<br />");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

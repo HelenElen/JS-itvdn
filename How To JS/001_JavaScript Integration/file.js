@@ -1,0 +1,1 @@
+alert("Script in external file");

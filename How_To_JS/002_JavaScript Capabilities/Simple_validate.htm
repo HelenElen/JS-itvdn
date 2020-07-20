@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Simple validate</title>
+
+    <script type="text/javascript">
+
+    	function validateForm(){
+            var inputs = document.forms["myForm"]["name"].value;
+            if(inputs == null || inputs == ""){
+                document.getElementById("alert").style.display = "block";
+                return false;
+            }
+        }
+
+    </script>
+    <style>
+        span
+        {
+            font-style: italic;
+            display: none;
+            color: red;
+        }
+        div
+        {
+            width: 500px;
+            height: 100px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form name="myForm" onsubmit="return validateForm()">
+            First name: <br />
+            <input type="text" name="name" /><br />
+            <span id="alert">заполните поле</span>
+            <input type="submit" value="Submit" />
+            
+        </form>
+    </div>    
+</body>
+</html>

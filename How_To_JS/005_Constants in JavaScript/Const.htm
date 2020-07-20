@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>How to declare a constant</title>
+
+    <script type="text/javascript">
+
+        //Before ECMAScript6
+        var COLOR_INDIGO = "#4B0082";
+        var new_color = COLOR_INDIGO;
+        document.write("Indigo".fontcolor(new_color).fontsize(30).bold() + "<br />");
+
+        //Value changed
+        COLOR_INDIGO = "#000000";
+        document.write("Indigo".fontcolor(COLOR_INDIGO).fontsize(30).bold() + "<br />");
+
+
+
+        //ECMAScript6
+        const COLOR_GRAY = "#808080";
+        document.write("Grey".fontcolor(COLOR_GRAY).fontsize(30).bold() + "<br />");
+
+        COLOR_GRAY = "#FFA500";
+
+
+        //Вурсии браузеров, которые поддерживают константы
+        //IE11
+        //Firefox 31+
+        //Opera 12+
+        //Safari 5.1.7+
+        //Chrome 36+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

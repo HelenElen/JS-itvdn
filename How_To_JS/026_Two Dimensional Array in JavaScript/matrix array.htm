@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script type="text/javascript">
+
+        var array1 = new Array(5);
+
+        for (var i = 0; i < array1.length; i++) {
+
+            array1[i] = new Array(5);
+        }
+
+        array1[0][3] = 45;
+        array1[0][4] = 6;
+        array1[0][2] = 7;
+
+        for (var i = 0; i < array1.length; i++) {
+            for (var j = 0; j < array1[i].length; j++) {
+                document.write(array1[i][j] + ", ");
+            }
+            document.write("<br />");
+        }
+
+        //part2
+
+        for (var i = 0; i < array1.length; i++) {
+            for (var j = 0; j < array1[i].length; j++) {
+                array1[i][j] = (j + i) * 7;
+            }
+
+        }
+
+        for (var i = 0; i < array1.length; i++) {
+            for (var j = 0; j < array1[i].length; j++) {
+                document.write(array1[i][j] + ", ");
+            }
+            document.write("<br />");
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

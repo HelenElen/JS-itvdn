@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <script type="text/javascript">
+
+        function addition(a, b) {
+
+            return a + b;
+        }
+
+        function multiplication(a, b) {
+
+            return a * b;
+        }
+
+        function execute(callbackFunction, a, b) {
+            
+            var res = callbackFunction(a, b);
+            document.write(res + "<br />");
+        }
+
+        execute(addition, 30, 40);
+        execute(multiplication, 30, 40);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

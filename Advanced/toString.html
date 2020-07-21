@@ -1,0 +1,30 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        //[alt+z] создайте пример демонстрирующий назначение метода toString()
+
+        // Каждый объект обладает методом toString, который вызывается автоматически каждый раз, когда требуется строковое представление объекта. По умолчанию, если этот метод не перекрыт объектом-наследником Object - он возвращает "[object <тип объекта>]". 
+        // Полезной практикой является перекрытие toString для новых типов объектов. Метод toString не получает аргументов и возвращает строку. Как правило, эта строка содержит основную информацию об объекте.
+
+        function Dog(name, color) {
+            this.name = name;
+            this.color = color;
+        }
+
+        Dog.prototype.toString = function () {
+            return "Dog " + this.name + ", color: " + this.color
+        }
+
+        theDog = new Dog("Timon", "orange");
+        document.write(theDog);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

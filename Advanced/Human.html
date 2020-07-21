@@ -1,0 +1,68 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title></title>
+	<script type="text/javascript">
+		//[alt+z] Разработайте функцию-конструктор, которая будет создавать объект Human. Создайте массив объектов и реализуйте функцию, которрая будет сортировать элементы по значению свойства Age по возратсанию и убыванию
+
+		var Human = function (name, lname, age) {
+			this.name = name;
+			this.lname = lname;
+			this.age = age;
+		}
+
+		var Elena = new Human('Elena', 'Kostina', 23);
+		var Misha = new Human('Misha', 'Ivanov', 20);
+		var Helga = new Human('Helga', 'Petrova', 40);
+
+		var people = [Elena, Misha, Helga];
+
+		function sortByAge(array, order) {
+			if (order == "asc") {
+				document.write("Находим самого взрослого кандидата!" + "<br />");
+				var maxValue = Number.NEGATIVE_INFINITY;
+				var maxVname = "";
+				for (var i = 0; i < array.length; i++) {
+					if (array[i].age > maxValue) {
+						maxValue = array[i].age;
+						maxVname = array[i].name;
+					}
+				}
+				return document.write("Имя: " + maxVname + "<br/>" + "Возраст: " + maxValue);
+			} else if (order == "desc") {
+				document.write("Находим самого младшего кандидата!" + "<br />");
+				var minVelue = Number.POSITIVE_INFINITY;
+				var minVname = "";
+				for (var i = 0; i < array.length; i++) {
+					if (array[i].age < minVelue) {
+						minVelue = array[i].age;
+						minVname = array[i].name;
+					}
+				}
+				return document.write("Имя: " + minVname + "<br />" + " Возраст: " + minVelue);
+			} else {
+				document.write("error!");
+			}
+		}
+
+		sortByAge(people, "desc");
+		document.write("<br/>");
+		document.write("<br/>");
+		sortByAge(people, "asc");
+
+		// function ageHumArg(age1, age2, age3) {
+		//     var mas = [...arguments];
+		//     document.write('Сортировка по возрастанию: ', mas.sort(), '</br>');
+		//     document.write('Сортировка по убыванию: ', mas.sort((a, b) => b - a));
+		//     document.write('<hr>');
+		// }
+		// ageHumArg(human1.age, human2.age, human3.age);
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>

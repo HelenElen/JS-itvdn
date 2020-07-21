@@ -1,0 +1,62 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        // Ненавязчивое решение заключается в программной установке обработчиков событий. Обычно это достигается логическим выделением элементов, для которых необходим тот или иной обработчки в класс с последующей обработкой
+
+        // создайте страницу, разместите на странице в произыольном порядке несколько параграфов, ссылок и элемент Div с id = test_div. Разместите на странице три кнопки - "выбрать все параграфы", "выбрать все ссылки", "выбрать DIV". При нажатиии на каждую кнопку должна запусвкаться функция обработчик, кторая добавит рамку определенного цвета на соответсвующие элементы. Сделайте код JS ненавязчивым
+
+        window.onload = function () {
+
+            // обработчик на событие нажатие по кнопке c id = "allP"
+            document.getElementById("allP").onclick = function () {
+                // получение всех элементов p 
+                var paragraphs = document.getElementsByTagName("p");
+                for (var i = 0; i < paragraphs.length; i++) {
+                    // смена CSS атрибута color и border для всех параграфов
+                    // console.log(paragraph[i]);
+                    paragraph[i].style.borderStyle = "solid";
+                    paragraph[i].style.borderColor = "green";
+                }
+            }
+
+            document.getElementById("allH").onclick = function () {
+                //получение всех элементов a
+                var links = document.getElementsByTagName("a");
+
+                for (var i = 0; i < links.length; i++) {
+                    // console.log(links[i]);
+                    links[i].style.borderStyle = "solid";
+                    links[i].style.borderColor = "red";
+                }
+            }
+
+            document.getElementById("allD").onclick = function () {
+                document.getElementById("test_div").style.borderStyle = "solid";
+                document.getElementById("test_div").style.borderColor = "blue";
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <p id="paragraph">One Paragraph</p>
+    <p id="paragraph">Two Paragraph</p>
+    <p id="paragraph">Three Paragraph</p>
+
+    <a id="link" href="#">one link</a>
+    <a id="link" href="#">two link</a>
+    <a id="link" href="#">three link</a>
+
+    <div id="test_div">My DIV</div>
+
+    <input id="allP" type="button" value="выбрать все параграфы" />
+    <input id="allH" type="button" value="выбрать все ссылки" />
+    <input id="allD" type="button" value="выбрать DIV" />
+</body>
+
+</html>

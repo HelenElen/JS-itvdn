@@ -1,0 +1,45 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        //[alt+z] Создайте функцию-конструктор, которая создает объект со свойством экземпляра, свойством функции-конструктора, с методом экземпляра и методом функции-конструктора.Имена выберете произвольно 
+        var Human = function (name, lname, sex) {
+            this.name = name;
+            this.lname = lname;
+            this.sex = sex;
+            this.eat = function () {
+                if (this.sex == 'male') {
+                    document.write('KFC <br/>')
+                    document.write(' метод экземпляра<br/><br/>')
+                } else {
+                    document.write('Resturant <br/>');
+                    document.write('метод экземпляра <br/> <br/>');
+                }
+            }
+        }
+        Human.prototype.type = "Homo Sapiens";
+        Human.prototype.mymethod = function () {
+            document.write("<br/> Метод функции конструктора  <br/>")
+        }
+
+
+        var Kolya = new Human("Kolya", "Petrov", 'male');
+        var Katya = new Human("Katya", "Sidiriva", "female");
+
+        document.write("Kolya:" + Kolya.type + ", " + "<br/>");
+        Kolya.eat();
+        document.write("Katya: ", Katya.type + ", ", Katya.sex + "<br/>");
+        Katya.eat();
+
+        Katya.mymethod();
+        Kolya.mymethod();
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

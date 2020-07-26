@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // Реализуйте страницу, которая после 5 секунд после загрузки отобразит пользователю новое окно с произвольным контентом
+        var myFuncrion = function(){
+            alert('this is my setTimeout');
+        }
+
+        window.onload = function(){
+            setTimeout(myFuncrion, 5000 );
+        }
+    </script>
+</head>
+<body>
+    <p>wait 5 sec...</p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        //!!!ДОДЕЛАТЬ
+        //VSCode[alt+z] Разработать модуль, который будет содержать функцию для получения элементов на странице с определенным значением в атрибуте с именем class. Пример использование сдуля. var arr = MyQuery.FindClass("redButton"); - возвращает массив с атрибутом class="redButton"
+
+        // установка атрибута
+        // a1.setAttribute("href", "http://edu.cbsystematics.com");
+
+        // удаление атрибута
+        // a2.removeAttribute("href");
+
+        // чтение атрибута
+        // alert(a3.getAttribute("href"));
+
+        window.onload = function () {
+            var people = document.getElementsByTagName("div");
+
+
+            var findClass = function (nameClass) {
+                var myClassc = people.getAttribute(nameClass);
+                console.log(myClassc)
+            }
+
+            findClass("myClass");
+            // for (var i = 0; i < findClass.length; i++) {
+            //     document.write(findClass[i]) 
+            // }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="myClass">Tanya</div>
+    <div class="myClass">Ilya</div>
+    <div class="myClass">Irina</div>
+    <div class="my">Irina</div>
+</body>
+
+</html>

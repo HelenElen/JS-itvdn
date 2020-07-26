@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        //VSCode[alt+z] создайте страницу с кнопкой, при нажатии по кнопке на странице должен создаваться параграф с произвольным текстом. После создания 10 параграфов они должны быть удалены;
+
+        // Методы для работы с DOM
+        // appendChild - добавить дочерний элемент
+        // insertBefore - добавить элемент перед указанным
+        // removeChild - удаление элемента
+        // replaceChild - замена одного элемента на другой
+
+        window.onload = function () {
+            if (list != 0) {
+                var list = document.getElementById('myId');
+            } else {
+                console.log('net')
+            }
+
+            document.getElementById("myButton").onclick = function () {
+
+                if (document.getElementsByTagName("p").length == 10) {
+                    var pList = document.getElementsByTagName('p');
+                    if (pList != 0) {
+                        for (var j = 0; j < pList.length; j++) {
+                            var newList = pList[j];
+                            list.removeChild(newList);
+                        }
+                    }
+                } else {
+                    var myP = document.createElement("p");
+                    myP.innerHTML = "Paragraph ";
+                    list.appendChild(myP);
+                }
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <input id="myButton" type="button" value="Создать параграф" />
+    <div id="myId"></div>
+</body>
+
+</html>

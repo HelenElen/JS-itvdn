@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //создайте приложение, которое от пользователя должно принимать строки в формате "10+20" или "50-6". При получении такой строки прилдожение должно отобразить результат арифметического действия
+        window.onload = function () {
+            var someText = {};
+            var myButton = document.getElementById("mybutton").onclick = function () {
+                someText = document.getElementById("mytext").value;
+                
+                for(var i = 0; i< someText.length; i++){
+                    
+                }
+            }
+
+
+            console.log(someText)
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <input id="mytext" type="text">
+    <input id="mybutton" type="button" value="=">
+</body>
+
+</html>

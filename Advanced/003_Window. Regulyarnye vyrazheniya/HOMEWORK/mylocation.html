@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getQueryString() {
+// Разработайте страницу, которая будет принимать сумму двух GET параметров a и b. Например, если на страницу заходят по адресу page.html?a=100&b=200, то в теле страницы должно отображаться сообщение "Сумма 300"
+
+            // location - URL адрес текущего документа.
+            var args = {}; // пустой объект
+            // login=admin password=123
+            var query = location.search.substring(1); // Получение строки запроса.
+            // document.write('query: ', query, " <br/>");
+            // document.write("search  = " + document.location.search + "<br />");
+
+            var pairs = query.split("&"); // Разделение строки по амперсанду
+            // document.write('pairs: ', pairs);
+
+            for (var i = 0; i < pairs.length; i++) {
+
+                var pos = pairs[i].indexOf('='); // Проверка пары "name=value"
+                if (pos == -1) { // Если не найдено - пропустить
+                    continue;
+                }
+
+                var argname = pairs[i].substring(0, pos); // Получение имени
+                var value = pairs[i].substring(pos + 1); // Получение значения
+
+                args[argname] = value; // Сохранение как свойства
+                // console.log(args[argname] )
+                // console.log(args)
+            }
+            return args;
+        }
+
+        function print() {
+            var args = getQueryString();
+            var e = document.createElement("p");
+
+            e.innerHTML = "Сумма: " + (parseInt(args.a, 10) + parseInt(args.b, 10)) + "<br />";
+
+
+            document.body.appendChild(e);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" name="name" value="Read Query Parameters" onclick="print()" />
+</body>
+
+</html>
